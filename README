@@ -1,0 +1,40 @@
+DB2Triples - RDB2RDF Antidot implementation
+LGPL Licence
+https://github.com/jhomo/db2triples
+http://www.antidot.net
+
+Building the jar
+================
+
+To build DB2Triples jar, you need to use Maven (http://maven.apache.org/)
+which will provide to you all the necessary package to compile.
+
+This will provide a file "db2triples-<version number>.jar" in the "target"
+directory according to default configuration of Maven.
+
+Using the lib
+=============
+
+** Needed dependency **
+
+OpenRdf Sesame > 2.5.x - http://www.openrdf.org/
+Commons-cli > 1.2 - http://commons.apache.org/cli/
+Commons-logging > 1.1.1 - http://commons.apache.org/logging/
+MySQL Connector > 5.1.15 - http://www.mysql.com/downloads/connector/j/ 
+
+** Command line **
+
+According your classpath has the links to all the preceding jar and the 
+"db2triples-<version number>.jar", you van launch the lib as follow.
+
+To call DirectMapping:
+java antidot.dm.main.DirectMapping
+
+To call R2RML:
+java antidot.r2rml.main.R2RML
+
+Contacts
+========
+
+Lead developer : Julien Homo - jhomo@antidot.net
+Packaging, Git admin : Laurent Mazuel - lmazuel@antidot.net 
