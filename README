@@ -3,6 +3,10 @@ LGPL Licence
 https://github.com/jhomo/db2triples
 http://www.antidot.net
 
+References : W3C Working Drafts 24 March 2011
+- R2RML: RDB to RDF Mapping Language (http://www.w3.org/TR/2011/WD-r2rml-20110324/)
+- A Direct Mapping of Relational Data to RDF (http://www.w3.org/TR/2011/WD-rdb-direct-mapping-20110324/)
+
 Building the jar
 ================
 
@@ -11,6 +15,7 @@ which will provide to you all the necessary package to compile.
 
 This will provide a file "db2triples-<version number>.jar" in the "target"
 directory according to default configuration of Maven.
+
 
 Using the lib
 =============
@@ -24,14 +29,28 @@ MySQL Connector > 5.1.15 - http://www.mysql.com/downloads/connector/j/
 
 ** Command line **
 
-According your classpath has the links to all the preceding jar and the 
-"db2triples-<version number>.jar", you van launch the lib as follow.
+According your classpath has the links to all the preceding jars and the 
+"db2triples-<version number>.jar", you can launch the lib as follow :
 
-To call DirectMapping:
+- To call DirectMapping :
 java antidot.dm.main.DirectMapping
 
-To call R2RML:
+- To call R2RML :
 java antidot.r2rml.main.R2RML
+
+
+Execute the jar
+===============
+
+You can also compile and execute directly the jar.
+This operation requires to copy dependencies into working folder.
+
+Use following commands :
+
+mvn dependency:copy-dependencies
+
+java -cp target/dependency/*.jar:target/db2triples-<version number>.jar <path to the lib>
+
 
 Contacts
 ========
