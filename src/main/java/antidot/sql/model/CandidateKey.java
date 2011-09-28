@@ -1,30 +1,41 @@
-/***************************************************************************
- *
- * SQL model : candidate key
- *
- * (C) 2011 Antidot (http://www.antidot.net)
- *
- * Module			:	SQL.SQLModel
+/* 
+ * Copyright 2011 Antidot opensource@antidot.net
+ * https://github.com/antidot/db2triples
  * 
- * Fichier			:	CandidateKey.java
- *
- * Description		:	Represents candidate keys of a database according to W3C database model.
- * 						A candidate key of a relation is a minimal superkey for that relation;
- * 						that is, a set of attributes such that :
- * 						1) the relation does not have two distinct tuples (i.e. rows or records in common database language) 
- * 						with the same values for these attributes (which means that the set of attributes is a superkey)
- * 						2 )there is no proper subset of these attributes for which (1) holds (which means that the set is minimal).
+ * DB2Triples is free software; you can redistribute it and/or 
+ * modify it under the terms of the GNU General Public License as 
+ * published by the Free Software Foundation; either version 2 of 
+ * the License, or (at your option) any later version.
  * 
- * Reference		:	Direct Mapping Definition
- * 						A Direct Mapping of Relational Data to RDF 
- * 						W3C Working Draft 24 March 2011 
+ * DB2Triples is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/**
  *
- * Options de compilation:
+ * SQL model : body
  *
- * Auteurs(s)			:	JHO
+ * Represents candidate keys of a database according to W3C database model.
+ * A candidate key of a relation is a minimal superkey for that relation;
+ * that is, a set of attributes such that :
+ * 		1) the relation does not have two distinct tuples (i.e. rows or
+ * 		   records in common database language) with the same values for these
+ * 		   attributes (which means that the set of attributes is a superkey)
+ * 		
+ * 		2) there is no proper subset of these attributes for which (1)
+ * 		   holds (which means that the set is minimal).
+ * 
+ * Reference : Direct Mapping Definition, 
+ * A Direct Mapping of Relational Data to RDF W3C Working Draft 24 March 2011 
  *
+ * @author jhomo
  *
- ****************************************************************************/
+ */
 package antidot.sql.model;
 
 import java.util.ArrayList;

@@ -1,39 +1,42 @@
-/***************************************************************************
+/* 
+ * Copyright 2011 Antidot opensource@antidot.net
+ * https://github.com/antidot/db2triples
+ * 
+ * DB2Triples is free software; you can redistribute it and/or 
+ * modify it under the terms of the GNU General Public License as 
+ * published by the Free Software Foundation; either version 2 of 
+ * the License, or (at your option) any later version.
+ * 
+ * DB2Triples is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/**
  *
  * R2RML Model : RefPredicateObject interface
  *
- * (C) 2011 Antidot (http://www.antidot.net)
- *
- * Module			:	R2RMLModel
+ * An element of a class which implements this interface, contains the rules for
+ * generating a (predicate, object) pair from a logical table row based on
+ * a foreign key relationship. It consists of a RefPredicateMap and a RefObjectMap. 
  * 
- * Fichier			:	RefPredicateObject.java
- *
- * Description		:	An element of a class which implements this interface,
- * 						contains the rules for generating a (predicate, object)
- * 						pair from a logical table row based on a foreign 
- * 						key relationship. It consists of a RefPredicateMap 
- * 						and a RefObjectMap. 
+ * Conceptually, a RefPredicateObjectMap is similar to a PredicateObjectMap, 
+ * but involves a child (or referring) table and a parent (or referred) table. 
  * 
- * 						Conceptually, a RefPredicateObjectMap is similar to a 
- * 						PredicateObjectMap, but involves a child (or referring) 
- * 						table and a parent (or referred) table. 
+ * The RefPredicateMap specifies how to generate the predicate component
+ * based on the key of the foreign key constraint definition in the child 
+ * table and the RefObjectMap specifies how to generate the object component 
+ * from the two logical tables, the child and the parent.
  * 
- * 						The RefPredicateMap specifies how to generate the predicate 
- * 						component based on the key of the foreign key constraint 
- * 						definition in the child table and the RefObjectMap specifies
- * 						how to generate the object component from the two logical 
- * 						tables, the child and the parent.
- * 
- * Reference		:	RDF Vocabulary for R2RML
- * 						R2RML: RDB to RDF Mapping Language
- * 						W3C Working Draft 24 March 2011
+ * Reference : R2RML: RDB to RDF Mapping Language, W3C Working Draft 24 March 2011
  *
- * Options de compilation:
+ * @author jhomo
  *
- * Auteurs(s)			:	JHO
- *
- *
- ****************************************************************************/
+ */
 package antidot.r2rml.model;
 
 import java.util.Set;

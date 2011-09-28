@@ -1,26 +1,35 @@
-/***************************************************************************
+/* 
+ * Copyright 2011 Antidot opensource@antidot.net
+ * https://github.com/antidot/db2triples
+ * 
+ * DB2Triples is free software; you can redistribute it and/or 
+ * modify it under the terms of the GNU General Public License as 
+ * published by the Free Software Foundation; either version 2 of 
+ * the License, or (at your option) any later version.
+ * 
+ * DB2Triples is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/**
  *
  * SQL model : header
  *
- * (C) 2011 Antidot (http://www.antidot.net)
- *
- * Module			:	SQL.SQLModel
+ * Represents header of a database according to W3C database model.
+ * In this case, header contains information about types of data stored
+ * in column of tables.
  * 
- * Fichier			:	Header.java
+ * Reference : Direct Mapping Definition, 
+ * A Direct Mapping of Relational Data to RDF W3C Working Draft 24 March 2011 
  *
- * Description		:	Represents header of a database according to W3C database model..
- * 						In this case, header contains information about types of data stored in column of tables.
- * 
- * Reference		:	Direct Mapping Definition
- * 						A Direct Mapping of Relational Data to RDF 
- * 						W3C Working Draft 24 March 2011 
+ * @author jhomo
  *
- * Options de compilation:
- *
- * Auteurs(s)			:	JHO
- *
- *
- ****************************************************************************/
+ */
 package antidot.sql.model;
 
 import java.util.ArrayList;
@@ -29,9 +38,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * @author   jh
- */
 public class Header {
 
 	// Types stored
