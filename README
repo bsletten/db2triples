@@ -1,24 +1,22 @@
 DB2Triples - RDB2RDF Antidot implementation
 LGPL Licence
-https://github.com/jhomo/db2triples
+https://github.com/antidot/db2triples
 http://www.antidot.net
 
 References : W3C Working Drafts 24 March 2011
 - R2RML: RDB to RDF Mapping Language (http://www.w3.org/TR/2011/WD-r2rml-20110324/)
 - A Direct Mapping of Relational Data to RDF (http://www.w3.org/TR/2011/WD-rdb-direct-mapping-20110324/)
 
-Building the jar
-================
 
-To build DB2Triples jar, you need to use Maven (http://maven.apache.org/)
-which will provide to you all the necessary package to compile.
+Using the library
+=================
 
-This will provide a file "db2triples-<version number>.jar" in the "target"
-directory according to default configuration of Maven.
+** Getting the jar **
 
+The last version of the jar is available to download on the github repository,
+using the "Downloads" button:
 
-Using the lib
-=============
+https://github.com/antidot/db2triples/
 
 ** Needed dependency **
 
@@ -39,21 +37,34 @@ java antidot.dm.main.DirectMapping
 java antidot.r2rml.main.R2RML
 
 
+Building your own jar
+=====================
+
+To build DB2Triples jar, you need to use Maven (http://maven.apache.org/)
+which will provide to you all the necessary package to compile. The classical
+way is the command:
+
+mvn package
+
+This will provide a file "db2triples-<version number>.jar" in the "target"
+directory according to default configuration of Maven.
+
+
 Execute the jar
 ===============
 
-You can also compile and execute directly the jar.
+You can also compile and execute directly the jar from Maven build.
 This operation requires to copy dependencies into working folder.
 
 Use following commands :
 
 mvn dependency:copy-dependencies
 
-java -cp target/dependency/*.jar:target/db2triples-<version number>.jar <path to the lib>
+java -cp target/dependency/*.jar:target/db2triples-<version number>.jar <main function>
 
 
 Contacts
 ========
 
 Lead developer : Julien Homo - jhomo@antidot.net
-Packaging, Git admin : Laurent Mazuel - lmazuel@antidot.net 
+Maven packaging, Git admin : Laurent Mazuel - lmazuel@antidot.net 
